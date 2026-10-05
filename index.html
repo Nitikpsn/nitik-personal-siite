@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nitik-Portfolio</title>
+    <title>Nitik - Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Hanging sticker corner -->
+    <img src="flag-orpheus-top.png" alt="" class="hanging-sticker" aria-hidden="true">
+
     <header>
         <nav>
-            <a href="#home" class="logo">Nitik</a>
+            <a href="#home" class="logo">
+                <img src="nitik.jpg" alt="Nitik" class="logo-img">
+                <span>Nitik</span>
+            </a>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -20,21 +26,32 @@
 
     <main>
         <section id="home" class="hero">
-            <h1>Hi, I'm Nitik</h1>
-            <p class="tagline">student</p>
+            <h1>Hello, I'm Nitik</h1>
+            <p class="tagline">Just a normal guy building software</p>
             <a href="#projects" class="btn">View Work</a>
         </section>
 
         <section id="about">
-            <h2>About</h2>
-            <p>I build clean, functional web applications. Focus on performance, accessibility, and maintainable code.</p>
-            <div class="skills">
-                <span>java</span>
-                <span>Python</span>
-                <span>C</span>
-                <span>Node.js</span>
-                <span>CSS</span>
-                <span>GitHub</span>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>About</h2>
+                    <p class="lead">I fell in love with technology before I knew what it was called.</p>
+                    <p>Growing up in Delhi, I was that kid who took apart every remote-controlled car, every broken toy, every gadget I could get my hands on—not to break them, but to see the magic inside. At 12, I decided I'd build my own robot. Not a kit. Not a tutorial. My own. I spent months scavenging motors from old CD drives, learning to solder on a borrowed iron that was older than me, writing terrible code on a shared family laptop that lagged every time I opened Chrome.</p>
+                    <p>That robot never walked. But the obsession stuck.</p>
+                    <p>Now 17, still in Delhi, still a PCM student juggling physics derivations and board exams. But my nights look different—CTF challenges, DNS reconnaissance tools, systems programming in C, debugging kernel panics at 2 AM. The robot dream evolved into something quieter but deeper: building tools that solve real problems for real people.</p>
+                    <p>2026 has been the year I stopped asking permission. Shipped CTFT and Gxpdns. Contributed to open source. Failed a lot. Learned more. The laptop's faster now. The soldering iron's still borrowed.</p>
+                    <div class="skills">
+                        <span>Java</span>
+                        <span>Python</span>
+                        <span>C</span>
+                        <span>Node.js</span>
+                        <span>CSS</span>
+                        <span>GitHub</span>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="nitik.jpg" alt="Nitik at work" class="about-img">
+                </div>
             </div>
         </section>
 
@@ -45,14 +62,15 @@
 
         <section id="contact">
             <h2>Contact</h2>
-            <p>Email: <a href="mailto:nitikpsn@email.com">mail </a></p>
-            <p>GitHub: <a href="https://github.com/Nitikps" target="_blank">Nitikpsn</a></p>
+            <p>Email: <a href="mailto:nitikpsn@email.com">nitikpsn@email.com</a></p>
+            <p>GitHub: <a href="https://github.com/Nitikpsn" target="_blank">github.com/Nitikpsn</a></p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/nitik-paswan-10474b356/" target="_blank">Nitik Paswan</a></p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; Nitik paswan</p>
+        <p>&copy; Nitik Paswan</p>
+        <p class="wip-note">still in working</p>
     </footer>
 
     <script src="script.js"></script>
