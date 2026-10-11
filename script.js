@@ -1,17 +1,17 @@
 const projects = [
   {
     title: "CTFT",
-    description: "CTFT — Comparison Tool for Teachers. AI-powered Excel comparison tool for KV teachers. Compare student records against portal data, generate CBSE/KVS reports, and query data in plain English or Hindi.",
-    tags: ["AI", "Python", "Excel", "Education"],
-    image: "https://picsum.photos/seed/ctft/600/350.jpg",
+    description: "CTFT Comparison Tool for Teachers AI powered Excel comparison tool for KV teachers Compare student records against portal data generate CBSE KVS reports and query data in plain English or Hindi",
+    tags: ["AI" "Python" "Excel" "Education"],
+    image: "",
     demoUrl: "#",
     sourceUrl: "https://github.com/Nitikpsn/CTFT"
   },
   {
     title: "Gxpdns",
-    description: "A fast DNS auditing and network reconnaissance tool built for inspecting records and network security diagnostics.",
-    tags: ["Networking", "DNS", "Security"],
-    image: "https://picsum.photos/seed/gxpdns/600/350.jpg",
+    description: "A fast DNS auditing and network reconnaissance tool built for inspecting records and network security diagnostics",
+    tags: ["Networking" "DNS" "Security"],
+    image: "",
     demoUrl: "#",
     sourceUrl: "https://github.com/Nitikpsn/Gxpdns"
   }
@@ -22,8 +22,14 @@ const grid = document.getElementById('projects-grid');
 projects.forEach(project => {
     const card = document.createElement('article');
     card.className = 'project-card';
+    let imageHtml = '';
+    if (project.image) {
+        imageHtml = `<img src="${project.image}" alt="${project.title}" loading="lazy">`;
+    } else {
+        imageHtml = `<div style="width:100%;height:180px;background:#181818;border-bottom:1px solid #262626;display:flex;align-items:center;justify-content:center;color:#555;font-size:0.9rem;">${project.title}</div>`;
+    }
     card.innerHTML = `
-        <img src="${project.image}" alt="${project.title}" loading="lazy">
+        ${imageHtml}
         <div class="card-content">
             <h3>${project.title}</h3>
             <p>${project.description}</p>

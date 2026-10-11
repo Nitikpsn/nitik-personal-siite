@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: -apple-system BlinkMacSystemFont "Segoe UI" Roboto Helvetica Arial sans-serif;
 }
 
 html {
@@ -16,45 +16,6 @@ body {
     padding: 24px;
     max-width: 880px;
     margin: 0 auto;
-    position: relative;
-}
-
-/* Hanging sticker - top right corner */
-.hanging-sticker {
-    position: fixed;
-    top: 24px;
-    right: 24px;
-    width: 100px;
-    height: auto;
-    transform: rotate(-3deg);
-    filter: drop-shadow(4px 6px 12px rgba(0, 0, 0, 0.5));
-    z-index: 100;
-    pointer-events: none;
-    opacity: 0.9;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.hanging-sticker:hover {
-    transform: rotate(0deg) scale(1.05);
-    opacity: 1;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .hanging-sticker {
-        transform: none;
-        transition: none;
-    }
-    .hanging-sticker:hover {
-        transform: none;
-    }
-}
-
-@media (max-width: 600px) {
-    .hanging-sticker {
-        width: 100px;
-        top: 16px;
-        right: 16px;
-    }
 }
 
 header nav {
@@ -74,7 +35,6 @@ header nav .logo {
     font-weight: 600;
     text-decoration: none;
     font-size: 1.15rem;
-    letter-spacing: -0.02em;
 }
 
 .logo-img {
@@ -97,7 +57,6 @@ header nav a {
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 500;
-    transition: color 0.15s ease;
 }
 
 header nav a:hover {
@@ -110,19 +69,17 @@ header nav a:focus-visible {
     border-radius: 4px;
 }
 
-/* Hero Section */
 .hero {
     padding: 80px 0 60px;
     text-align: left;
 }
 
 .hero h1 {
-    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-size: clamp(2.2rem 5vw 3.2rem);
     color: #ffffff;
     margin-bottom: 12px;
     font-weight: 700;
     line-height: 1.15;
-    letter-spacing: -0.03em;
 }
 
 .hero .tagline {
@@ -143,7 +100,6 @@ header nav a:focus-visible {
     border: 1px solid #333;
     font-size: 0.95rem;
     font-weight: 500;
-    transition: background 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
 }
 
 .btn:hover {
@@ -151,16 +107,11 @@ header nav a:focus-visible {
     border-color: #444;
 }
 
-.btn:active {
-    transform: scale(0.98);
-}
-
 .btn:focus-visible {
     outline: 2px solid #3b82f6;
     outline-offset: 3px;
 }
 
-/* About Section */
 #about {
     margin-bottom: 70px;
 }
@@ -177,7 +128,6 @@ header nav a:focus-visible {
     color: #fff;
     margin-bottom: 24px;
     font-weight: 600;
-    letter-spacing: -0.01em;
     position: relative;
 }
 
@@ -226,10 +176,9 @@ header nav a:focus-visible {
     display: block;
 }
 
-/* Projects Grid */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit minmax(300px 1fr));
     gap: 20px;
 }
 
@@ -240,13 +189,6 @@ header nav a:focus-visible {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.project-card:hover {
-    border-color: #2e2e2e;
-    transform: translateY(-2px);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
 }
 
 .project-card img {
@@ -305,7 +247,6 @@ header nav a:focus-visible {
     border-top: 1px solid #222;
 }
 
-/* Contact */
 #contact {
     padding-top: 10px;
 }
@@ -320,7 +261,6 @@ header nav a:focus-visible {
     color: #3b82f6;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.15s ease;
 }
 
 #contact a:hover {
@@ -334,7 +274,6 @@ header nav a:focus-visible {
     border-radius: 3px;
 }
 
-/* Footer */
 footer {
     border-top: 1px solid #1f1f1f;
     padding-top: 24px;
@@ -353,7 +292,6 @@ footer {
     opacity: 0.7;
 }
 
-/* Responsive */
 @media (max-width: 800px) {
     .about-grid {
         grid-template-columns: 1fr;
@@ -414,11 +352,8 @@ footer {
     }
 }
 
-/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
+    * *::before *::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
