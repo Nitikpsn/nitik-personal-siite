@@ -16,6 +16,28 @@ body {
     padding: 24px;
     max-width: 880px;
     margin: 0 auto;
+    position: relative;
+}
+
+.hanging-sticker {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    width: 100px;
+    height: auto;
+    transform: rotate(-3deg);
+    filter: drop-shadow(4px 6px 12px rgba(0 0 0 0.5));
+    z-index: 100;
+    pointer-events: none;
+    opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+    .hanging-sticker {
+        width: 80px;
+        top: 16px;
+        right: 16px;
+    }
 }
 
 header nav {
