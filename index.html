@@ -2,75 +2,105 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width initial-scale=1.0">
-    <title>Nitik Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nitik Paswan</title>
+    <meta name="description" content="Personal portfolio of Nitik Paswan, a student developer building tools and learning by doing.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <img src="flag-orpheus-top.png" alt="" class="hanging-sticker" aria-hidden="true">
-    <header>
-        <nav>
+    <div class="orpheus-sticker" aria-label="Orpheus sticker">
+        <img src="flag-orpheus-top.png" alt="Orpheus flag sticker">
+    </div>
+
+    <header class="site-header">
+        <nav class="nav">
             <a href="#home" class="logo">
-                <img src="nitik.jpg" alt="Nitik" class="logo-img">
+                <img src="nitik.jpg" alt="Nitik Paswan" class="logo-img">
                 <span>Nitik</span>
             </a>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
         </nav>
     </header>
 
     <main>
         <section id="home" class="hero">
-            <h1>Hello I am Nitik</h1>
-            <p class="tagline">Just a normal guy building software</p>
-            <a href="#projects" class="btn">View Work</a>
+            <p class="eyebrow">Student developer • learner • builder</p>
+            <h1>Hi, I’m Nitik.</h1>
+            <p class="tagline">I like figuring out how things work, building small tools, and learning as I go.</p>
+            <div class="cta-row">
+                <a href="#projects" class="btn">See my work</a>
+                <a href="#contact" class="btn btn-secondary">Say hello</a>
+            </div>
         </section>
 
         <section id="about">
             <div class="about-grid">
                 <div class="about-text">
                     <h2>About</h2>
-                    <p class="lead">I fell in love with tech before I knew what it was called</p>
-                    <p>Growing up in Delhi I was that kid who took apart every remote car every broken toy every gadget I could find not to break them but to see the magic inside At 12 I decided I would build my own robot Not a kit Not a tutorial My own I spent months scavenging motors from old CD drives learning to solder on a borrowed iron older than me writing terrible code on a shared family laptop that lagged every time I opened Chrome</p>
-                    <p>That robot never walked But the obsession stuck</p>
-                    <p>Now 17 still in Delhi still a PCM student juggling physics derivations and board exams But my nights look different CTF challenges DNS reconnaissance tools systems programming in C debugging kernel panics at 2 AM The robot dream evolved into something quieter but deeper building tools that solve real problems for real people</p>
-                    <p>2026 has been the year I stopped asking permission Shipped CTFT and Gxpdns Contributed to open source Failed a lot Learned more The laptop is faster now The soldering iron is still borrowed</p>
+                    <p class="lead">I grew up curious about how things worked, and that curiosity never really stopped.</p>
+                    <p>I used to take apart old electronics just to understand what made them tick. I was the kind of kid who wanted to know why a gadget did what it did, not just how to use it.</p>
+                    <p>Over time, that turned into software, problem solving, and a love for building things from scratch. I spend a lot of time learning by doing—coding, debugging, exploring systems, and trying new ideas even when I’m not fully sure they’ll work.</p>
+                    <p>Right now, I’m learning and building in the middle of school life, board exams, and a lot of late-night tinkering. It’s not always polished, but it’s honest work and I enjoy it.</p>
                     <div class="skills">
                         <span>Java</span>
                         <span>Python</span>
                         <span>C</span>
-                        <span>Node.js</span>
-                        <span>CSS</span>
+                        <span>Networking</span>
+                        <span>Linux</span>
                         <span>GitHub</span>
                     </div>
                 </div>
+
                 <div class="about-image">
-                    <img src="nitik.jpg" alt="Nitik at work" class="about-img">
+                    <img src="nitik.jpg" alt="Nitik Paswan" class="about-img">
                 </div>
             </div>
         </section>
 
         <section id="projects">
             <h2>Projects</h2>
-            <div class="projects-grid" id="projects-grid"></div>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-badge">Education</div>
+                    <h3>CTFT</h3>
+                    <p>A tool designed to make data comparison and report generation easier for teachers and school staff. It was built to reduce repetitive work and save time in day-to-day admin tasks.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Excel</span>
+                        <span class="tag">Education</span>
+                    </div>
+                    <a href="https://github.com/Nitikpsn/CTFT" target="_blank" rel="noopener" class="project-link">View project</a>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-badge">Security</div>
+                    <h3>Gxpdns</h3>
+                    <p>A DNS and network inspection tool built to explore records, check basics, and support learning around security and reconnaissance in a practical way.</p>
+                    <div class="tags">
+                        <span class="tag">DNS</span>
+                        <span class="tag">Security</span>
+                        <span class="tag">Networking</span>
+                    </div>
+                    <a href="https://github.com/Nitikpsn/Gxpdns" target="_blank" rel="noopener" class="project-link">View project</a>
+                </article>
+            </div>
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
-            <p>Email <a href="mailto:nitikpsn@email.com">nitikpsn@email.com</a></p>
-            <p>GitHub <a href="https://github.com/Nitikpsn" target="_blank">github.com/Nitikpsn</a></p>
-            <p>LinkedIn <a href="https://www.linkedin.com/in/nitik-paswan-10474b356/" target="_blank">Nitik Paswan</a></p>
+            <p>Email: <a href="mailto:nitikpsn@email.com">nitikpsn@email.com</a></p>
+            <p>GitHub: <a href="https://github.com/Nitikpsn" target="_blank" rel="noopener">github.com/Nitikpsn</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/nitik-paswan-10474b356/" target="_blank" rel="noopener">Nitik Paswan</a></p>
         </section>
     </main>
 
     <footer>
         <p>Nitik Paswan</p>
-        <p class="wip-note">still in working</p>
+        <p class="footer-note">Building, learning, and improving one project at a time.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
