@@ -30,4 +30,7 @@ style.css
 banner.png
 nitik.jpg
 flag-orpheus-top.png
+favicon.ico
+apple-touch-icon.png
+icon-192.png
 ```
