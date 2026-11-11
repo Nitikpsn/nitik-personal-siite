@@ -2,7 +2,7 @@
 
 This is my personal site i try to make it for 1st time
 
-![Screenshot of the site](banner.png)
+![Screenshot of the site](img/banner.png)
 
 **Live site: https://www.nitikpsn.xyz**
 
@@ -21,18 +21,18 @@ My personal site. One page with a short intro, a little about how I got into bui
 
 ## How it works
 
-The site is a few static files. `index.html` holds the content, `style.css` holds the styling, `tech-text.js` powers the interactive intro heading (a vanilla JavaScript port of the React Bits TechText component), and the images sit next to them. There is still no framework and no package manager  I went this way because a portfolio does not need a build pipeline, and a static page is cheap to host and hard to break
+The site is a few static files. `index.html` holds the content, `css/style.css` holds the styling, `js/tech-text.js` powers the interactive intro heading (a vanilla JavaScript port of the React Bits TechText component), and the images live in `img/`. `favicon.ico` stays in the root because browsers ask for it there. There is still no framework and no package manager  I went this way because a portfolio does not need a build pipeline, and a static page is cheap to host and hard to break
 
 ## Project layout
 
 ```text
 index.html
-style.css
-tech-text.js
-banner.png
-nitik.jpg
-flag-orpheus-top.png
 favicon.ico
-apple-touch-icon.png
-icon-192.png
+css/style.css
+js/tech-text.js
+img/nitik.jpg
+img/banner.png
+img/flag-orpheus-top.png
+img/apple-touch-icon.png
+img/icon-192.png
 ```
