@@ -13,7 +13,7 @@ My personal site. One page with a short intro, a little about how I got into bui
 ## What is on it
 
 **A single page layout.**
-**A personal timeline.** My story in phases, written the honest way.
+**A personal timeline.** My story so far, in phases.
 **Two project cards.** 
 **A warm dark theme.** 
 **Responsive by default.**
