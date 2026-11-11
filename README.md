@@ -16,17 +16,18 @@ My personal site. One page with a short intro, a little about how I got into bui
 **Two project cards.** 
 **A warm simple theme.** 
 **Responsive by default.**
-**No JavaScript.** 
+**An interactive intro heading** (TechText, ported to plain JavaScript from React Bits). 
 
 ## How it works
 
-The site is a few static files. `index.html` holds the content, `style.css` holds the styling and the images sit next to them. There is no framework and no package manager  I went this way because a portfolio does not need a build pipeline, and a static page is cheap to host and hard to break
+The site is a few static files. `index.html` holds the content, `style.css` holds the styling, `tech-text.js` powers the interactive intro heading (a vanilla JavaScript port of the React Bits TechText component), and the images sit next to them. There is still no framework and no package manager  I went this way because a portfolio does not need a build pipeline, and a static page is cheap to host and hard to break
 
 ## Project layout
 
 ```text
 index.html
 style.css
+tech-text.js
 banner.png
 nitik.jpg
 flag-orpheus-top.png

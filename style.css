@@ -130,6 +130,42 @@ section {
     font-weight: 800;
 }
 
+/* TechText interactive heading (vanilla JS port of React Bits TechText) */
+.tech-text {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    touch-action: pan-y;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.tech-text-canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-tech-text {
+    height: clamp(180px, 55vw, 480px);
+}
+
+/* The real heading text stays for screen readers and no-JS visitors
+   once the canvas heading takes over */
+.js .hero-heading-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
 .tagline {
     max-width: 620px;
     color: var(--muted);

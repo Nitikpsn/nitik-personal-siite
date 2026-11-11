@@ -14,6 +14,7 @@
     <link rel="icon" href="favicon.ico" sizes="32x32">
     <link rel="icon" href="icon-192.png" type="image/png" sizes="192x192">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <script>document.documentElement.classList.add('js');</script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -38,7 +39,10 @@
     <main>
         <section id="home" class="hero">
             <p class="eyebrow">Student developer and builder</p>
-            <h1>Hi, I’m Nitik.</h1>
+            <h1 class="hero-heading">
+                <span class="hero-heading-text">Hi, I’m Nitik.</span>
+                <span id="tech-text-hero" class="tech-text hero-tech-text" aria-hidden="true"></span>
+            </h1>
             <p class="tagline">I like figuring out how things work, building small tools, and learning as I go.</p>
             <div class="cta-row">
                 <a href="#projects" class="btn">See my work</a>
@@ -111,5 +115,37 @@
         <p>Nitik Paswan</p>
         <p class="footer-note">Building, learning, and improving one project at a time.</p>
     </footer>
+
+    <script src="tech-text.js"></script>
+    <script>
+        createTechText('#tech-text-hero', {
+            text: "Hi, I’m Nitik.",
+            fontWeight: 600,
+            fontSize: 150,
+            reveal: "letter",
+            dashLength: 4,
+            dashGap: 2,
+            specks: 15,
+            intro: "none",
+            introDuration: 2,
+            clickKick: true,
+            guides: false,
+            fontFamily: "",
+            letterSpacing: -0.05,
+            accentColor: "currentColor",
+            reach: 200,
+            softness: 0.7,
+            lineStyle: "dashed",
+            strokeWidth: 1.5,
+            speed: 1,
+            bounce: 0.4,
+            selection: true,
+            labels: true,
+            color: "currentColor",
+            align: "center",
+            draggable: true,
+            sweep: true
+        });
+    </script>
 </body>
 </html>
