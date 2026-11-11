@@ -1,13 +1,14 @@
 :root {
-    --bg: #f6f1ea;
-    --panel: #fffaf4;
-    --panel-strong: #f1e4d6;
-    --ink: #1a1a1a;
-    --muted: #5d534d;
-    --line: #e4d4c1;
-    --accent: #9d5e3e;
-    --accent-dark: #743e2b;
-    --shadow: rgba(26, 26, 26, 0.08);
+    color-scheme: dark;
+    --bg: #161210;
+    --panel: #1e1915;
+    --panel-strong: #29211a;
+    --ink: #ece4d8;
+    --muted: #a89b8d;
+    --line: #342b22;
+    --accent: #e08a54;
+    --accent-soft: #ecab7d;
+    --shadow: rgba(0, 0, 0, 0.45);
 }
 
 * {
@@ -81,7 +82,7 @@ img {
     height: 38px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid rgba(0, 0, 0, 0.08);
+    border: 2px solid rgba(236, 228, 216, 0.18);
 }
 
 .nav-links {
@@ -114,9 +115,29 @@ section {
     padding-bottom: 30px;
 }
 
+.hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(0, 0.85fr);
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-photo {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-img {
+    width: min(100%, 280px);
+    border-radius: 24px;
+    border: 1px solid var(--line);
+    box-shadow: 0 16px 32px var(--shadow);
+    object-fit: cover;
+}
+
 .eyebrow {
     margin-bottom: 18px;
-    color: var(--accent-dark);
+    color: var(--accent-soft);
     font-size: 0.75rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -148,7 +169,10 @@ section {
 }
 
 .hero-tech-text {
-    height: clamp(180px, 55vw, 480px);
+    height: clamp(140px, 36vw, 240px);
+    /* cancel TechText's internal 5% left inset so the wordmark aligns
+       flush with the eyebrow and tagline text */
+    margin-left: -5%;
 }
 
 /* The real heading text stays for screen readers and no-JS visitors
@@ -184,8 +208,8 @@ section {
     padding: 12px 20px;
     border-radius: 999px;
     text-decoration: none;
-    background: var(--ink);
-    color: white;
+    background: var(--accent);
+    color: #1b120b;
     font-weight: 600;
     transition: transform 0.2s ease, background 0.2s ease;
 }
@@ -205,13 +229,6 @@ section {
     border-top: 1px solid var(--line);
 }
 
-.about-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 0.9fr;
-    gap: 36px;
-    align-items: start;
-}
-
 .about-text h2,
 #projects h2,
 #contact h2 {
@@ -219,8 +236,8 @@ section {
     font-size: clamp(1.7rem, 2.6vw, 2.2rem);
 }
 
-.about-text .lead {
-    color: var(--accent-dark);
+.lead {
+    color: var(--accent-soft);
     font-size: 1.1rem;
     margin-bottom: 16px;
     font-weight: 700;
@@ -229,6 +246,67 @@ section {
 .about-text p {
     color: var(--muted);
     margin-bottom: 14px;
+}
+
+.timeline {
+    margin-top: 34px;
+}
+
+.timeline h3 {
+    margin-bottom: 4px;
+    font-size: clamp(1.25rem, 2.2vw, 1.5rem);
+}
+
+.timeline-note {
+    color: var(--muted);
+    font-style: italic;
+    margin-bottom: 24px;
+}
+
+.phase {
+    position: relative;
+    padding-left: 26px;
+    padding-bottom: 14px;
+    border-left: 2px solid var(--line);
+}
+
+.phase::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 3px var(--bg);
+}
+
+.phase h4 {
+    color: var(--accent-soft);
+    font-size: 1.02rem;
+    margin-bottom: 10px;
+}
+
+.phase ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.phase li {
+    color: var(--muted);
+    margin-bottom: 12px;
+}
+
+.phase a {
+    color: var(--accent-soft);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.phase a:hover,
+.phase a:focus-visible {
+    text-decoration: underline;
 }
 
 .skills {
@@ -251,19 +329,6 @@ section {
     letter-spacing: 0.02em;
 }
 
-.about-image {
-    display: flex;
-    justify-content: center;
-}
-
-.about-img {
-    width: min(100%, 300px);
-    border-radius: 18px;
-    object-fit: cover;
-    border: 1px solid var(--line);
-    box-shadow: 0 16px 32px var(--shadow);
-}
-
 #projects {
     border-top: 1px solid var(--line);
 }
@@ -279,7 +344,7 @@ section {
     border: 1px solid var(--line);
     border-radius: 16px;
     padding: 22px;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.02);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
 }
 
 .project-badge {
@@ -287,8 +352,8 @@ section {
     margin-bottom: 12px;
     padding: 5px 10px;
     border-radius: 999px;
-    background: #f8e8dd;
-    color: var(--accent-dark);
+    background: rgba(224, 138, 84, 0.14);
+    color: var(--accent-soft);
     font-size: 0.68rem;
     font-weight: 700;
     letter-spacing: 0.05em;
@@ -313,7 +378,7 @@ section {
 }
 
 .project-link {
-    color: var(--accent-dark);
+    color: var(--accent-soft);
     font-weight: 700;
     text-decoration: none;
 }
@@ -333,7 +398,7 @@ section {
 }
 
 #contact a {
-    color: var(--accent-dark);
+    color: var(--accent-soft);
     text-decoration: none;
 }
 
@@ -370,8 +435,12 @@ footer {
         flex-wrap: wrap;
     }
 
-    .about-grid {
+    .hero-grid {
         grid-template-columns: 1fr;
+    }
+
+    .hero-photo {
+        margin-top: 14px;
     }
 }
 

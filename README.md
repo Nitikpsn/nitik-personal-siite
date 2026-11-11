@@ -13,8 +13,9 @@ My personal site. One page with a short intro, a little about how I got into bui
 ## What is on it
 
 **A single page layout.**
+**A personal timeline.** My story in phases, written the honest way.
 **Two project cards.** 
-**A warm simple theme.** 
+**A warm dark theme.** 
 **Responsive by default.**
 **An interactive intro heading** (TechText, ported to plain JavaScript from React Bits). 
 
